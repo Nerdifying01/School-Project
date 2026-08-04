@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Yooo stop looking - Nerdify</title>
+</head>
+
+<body class="theme-yellow">
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <p>Theme</p>
+        <button class="theme-btn active" data-theme="yellow" style="background:#f1c40f;" title="Yellow"></button>
+        <button class="theme-btn" data-theme="blue" style="background:#3498db;" title="Blue"></button>
+        <button class="theme-btn" data-theme="red" style="background:#e74c3c;" title="Red"></button>
+        <button class="theme-btn" data-theme="green" style="background:#2ecc71;" title="Green"></button>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="banner-area">
+            <img src="images/logo.png" alt="Nerdify Banner" class="banner-img">
+        </div>
+
+        <nav class="page-nav">
+            <a href="index.html">Home</a>
+            <a href="goober.html">About</a>
+            <a href="goober.html">Community</a>
+            <a href="goober.html">Resources</a>
+            <a href="goober.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="page-content">
+
+        <!-- Page Title -->
+        <h1 class="page-title">Interview</h1>
+
+        <!-- Intro text -->
+        <p class="page-intro">
+        </p>
+
+        <!-- Section -->
+        <h2 class="page-heading">Interview</h2>
+        
+<p>Interviewer:How did you feel when the Earthquake was happening? Were you panicking? </p>
+<p>Subject: I was very scared. [pause] But I knew what it was because we had a big earthquake at the start of the year.</p>
+<p>Subject: I was very scared. [pause] But I knew what it was because we had a big earthquake at the start of the year.</p>
+<p>Interviewer:Where were you?</p>
+<p>Subject: I was upstairs at the BHS staff room because it was lunch time. The February 11 earthquake happened at break time. The September 4th one was, I think, at 4 a.m.?</p>
+<p>Interviewer:What did you do during the Earthquake to keep yourself and your loved ones safe?</p>
+<p>Subject: Yeah, that would have been ideal, wouldn't it? But actually it was so violent you couldn't stand up. And in the staff room the desk was this high. So there was nothing to get under. Once we could stand up we just went straight out of the building. If you can, you get under something, right, because if an earthquake happened here all these tables would come falling. So you get under something, but if you can't get under something, get out of the building.</p>
+<p>Interviewer:Were any of your belongings destroyed in the Earthquake?</p>
+<p>Subject: Yeah, so our house was smashed. So East Christchurch was really badly structured. So our house was very new so it had good structure. But all the walls inside and out were all cracked and falling off. So only the drywall was all cracked and falling off. All the kitchen had imploded on the floor, TV was smashed, furniture was broken, pictures had fallen on the ground. There was no water nor was there power for weeks. In our lounge those big doors, those things jumped out. The doors had literally fallen out of their frame. Our house was not livable. We went down a road to a friend's house that wasn't quite so bad, and we slept on their floor but there were aftershocks all the time. About every ten minutes, so we didn't get any sleep. So we decided the next day to get in the car and drive out of Christchurch. So we went up into Rangiora. And we managed to get a house in Rangiora, which we stayed in for a week.</p>
+<p>Interviewer:Did you see any examples of liquefaction outside?</p>
+<p>Subject: Yeah I did, over in East Christchurch where I live. Most of the liquefaction was in East Christchurch where I live. It just depended on the geology of the ground, depending on if there was liquefaction. And the funny thing was if you bought a house in Christchurch before the earthquake it would always list the possibility of it happening until it happened. So now everyone understands what liquefaction is about.</p>
+<p>Interviewer:How long did it take you to regain contact with your friends and family after the earthquake?</p>
+<p>Subject: So phones weren't working. Ummm, and the only message I received was a text message from my husband, and it was "the house was stuffed." Because he was at home at the time. He is a contractor so sometimes he works at home. So he said the house is stuffed. And I was at Burnside and the house was stuffed. All the students at Burnside were all crying. It was really scary. But there was no communication, there was no electricity. Well, the electricity was out. They put batteries back into the cell phone towers so that they would work.</p>
+<p>Interviewer:How was your daily life and convenience affected by the Earthquake?</p>
+<p>Subject: Right, so school was shut down for three weeks. No at-home learning because this was 2011, so we didn't do at-home learning on devices back then. There was no school for three weeks. It was awful actually because the kids couldn't play with their mates. They couldn't get across the city, so no libraries, no buses, no pools. The CBD, the central business district, had lost almost 70% of its buildings, so you couldn't go to town, you couldn't go into the malls. Stuck in the house pooing in a bucket. So we got home and we had no water still. The electricity came back on in a week in East Christchurch. East Christchurch was affected the worst. No electricity for a week and no water for a month. This area of Christchurch was fine, so if you lived in North Christchurch you would be fine. So yeah, pooing in a bucket for a while and it wasn't pleasant, particularly when other people used our bucket. Anyway, so yeah things were difficult, but we were fine. No one was injured and no one in my family was injured or killed. The first week we lived outside of Christchurch, and the supermarket was open, and we couldn't actually go back home because the electricity wasn't on, so the fridge wouldn't work. This was in the middle of summer, of course. I can't really remember how we got food. It's all a bit of a blur. You had places like book stores selling milk. Because where else would you get your food? So stores that were able to operate were able to sell food items as well.</p>
+
+
+
+<p>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; This page is created by Aaron</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.theme-btn');
+        const body = document.body;
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                body.classList.remove('theme-yellow', 'theme-blue', 'theme-red', 'theme-green');
+                body.classList.add('theme-' + btn.dataset.theme);
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

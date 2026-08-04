@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Page Title - Nerdify</title>
+</head>
+
+<body class="theme-yellow">
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <p>Theme</p>
+        <button class="theme-btn active" data-theme="yellow" style="background:#f1c40f;" title="Yellow"></button>
+        <button class="theme-btn" data-theme="blue" style="background:#3498db;" title="Blue"></button>
+        <button class="theme-btn" data-theme="red" style="background:#e74c3c;" title="Red"></button>
+        <button class="theme-btn" data-theme="green" style="background:#2ecc71;" title="Green"></button>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="banner-area">
+            <img src="images/Banner.png" alt="Nerdify Banner" class="banner-img">
+        </div>
+
+        <nav class="page-nav">
+            <a href="index.html">Home</a>
+            <a href="goober.html">About</a>
+            <a href="goober.html">Community</a>
+            <a href="goober.html">Resources</a>
+            <a href="goober.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="page-content">
+
+        <!-- Page Title -->
+        <h1 class="page-title">Page Title Here</h1>
+
+        <!-- Intro text -->
+        <p class="page-intro">
+            This is a short introduction paragraph. You can write a couple of sentences here to explain what this page is about.
+        </p>
+
+        <!-- Section -->
+        <h2 class="page-heading">First Section</h2>
+        <p>
+            Write your normal paragraphs here. The text has good spacing so it feels comfortable to read.
+            You can add as many paragraphs as you want.
+        </p>
+        <p>
+            Another paragraph goes here. Everything is spread out nicely so it doesn’t look cramped.
+        </p>
+
+        <!-- Another Section -->
+        <h2 class="page-heading">Second Section</h2>
+        <p>
+            More content can go in this section. You can also add lists if you need them:
+        </p>
+
+        <ul class="page-list">
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+        </ul>
+
+        <p>
+            Keep adding more sections and paragraphs as needed. This layout works well for real pages.
+        </p>
+
+        <!-- Final Section -->
+        <h2 class="page-heading">Final Notes</h2>
+        <p>
+            Anything else you want to say can go here at the bottom.
+        </p>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; This page is created by Nerdify</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.theme-btn');
+        const body = document.body;
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                body.classList.remove('theme-yellow', 'theme-blue', 'theme-red', 'theme-green');
+                body.classList.add('theme-' + btn.dataset.theme);
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

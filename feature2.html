@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Why are you looking here. Like pay attention big dawg I see you James.</title>
+</head>
+
+<body class="theme-yellow">
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <p>Theme</p>
+        <button class="theme-btn active" data-theme="yellow" style="background:#f1c40f;" title="Yellow"></button>
+        <button class="theme-btn" data-theme="blue" style="background:#3498db;" title="Blue"></button>
+        <button class="theme-btn" data-theme="red" style="background:#e74c3c;" title="Red"></button>
+        <button class="theme-btn" data-theme="green" style="background:#2ecc71;" title="Green"></button>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="banner-area">
+            <img src="images/Logo.png" alt="Nerdify Banner" class="banner-img">
+        </div>
+
+        <nav class="page-nav">
+            <a href="index.html">Home</a>
+            <a href="goober.html">About</a>
+            <a href="goober.html">Community</a>
+            <a href="goober.html">Resources</a>
+            <a href="goober.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="page-content">
+
+        <!-- Page Title -->
+        <h1 class="page-title">Lesson For The Little Ones At Home</h1>
+
+        <!-- Intro text -->
+        <p class="page-intro">
+            Usually, sand which is made up of many tiny rocks has gaps which are filled with water. Like how a sponge has holes that store water. This means the sand acts as a solid like the hard ground. When we put weight on the sand, it squishes the little rocks against each other and the water goes somewhere with less pressure. But when liquefaction happens, like when an earthquake shakes the ground, the rocks in the sand don’t touch and so they can’t squish onto each other. This means that the water has nowhere to go, so it is pushed upward, making quicksand. It’s like if you stepped on a wet sponge. Your weight squeezes the trapped water out of the sponge and it loses its strength. After the shaking stops, the quicksand becomes strong, regular sand again so it traps whatever sank into the ground.
+        </p>
+
+        <!-- Section -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; This page is created by Aaron</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.theme-btn');
+        const body = document.body;
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                body.classList.remove('theme-yellow', 'theme-blue', 'theme-red', 'theme-green');
+                body.classList.add('theme-' + btn.dataset.theme);
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

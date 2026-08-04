@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Among us - Nerdify</title>
+</head>
+
+<body class="theme-yellow">
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <p>Theme</p>
+        <button class="theme-btn active" data-theme="yellow" style="background:#f1c40f;" title="Yellow"></button>
+        <button class="theme-btn" data-theme="blue" style="background:#3498db;" title="Blue"></button>
+        <button class="theme-btn" data-theme="red" style="background:#e74c3c;" title="Red"></button>
+        <button class="theme-btn" data-theme="green" style="background:#2ecc71;" title="Green"></button>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="banner-area">
+            <img src="images/Logo.png" alt="Nerdify Banner" class="banner-img">
+        </div>
+
+        <nav class="page-nav">
+            <a href="index.html">Home</a>
+            <a href="goober.html">About</a>
+            <a href="goober.html">Community</a>
+            <a href="goober.html">Resources</a>
+            <a href="goober.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="page-content">
+
+        <!-- Page Title -->
+        <h1 class="page-title">How Earthquakes are made</h1>
+
+        <!-- Intro text -->
+        <p class="page-intro">
+            To prepare for possible earthquakes, it is advised that you have the tools necessary to survive in an emergency such as fire extinguishers, first aid kits, flashlights, etc. It is incredibly important to make sure you have these items in your vicinity as an earthquake can lead to other disasters and can leave you stranded without supplies. 
+It is also smart to make sure that your important and expensive belongings are insured. This way, you can get back on your feet quickly and remain in a manageable financial situation as an earthquake will likely destroy many assets.
+	Learning techniques and procedures such as basic first aid and evacuation routes is also crucial preparation for potential earthquakes. First aid is vital as it will allow you to administer life saving treatment to yourself and other injured civilians in case of emergency. Knowing your way around a facility is also necessary as you can exit in the most efficient and safest way possible, guiding others along the way.
+
+    <p>
+During an earthquake, remain calm and stay where you are. If you are outside, stay outside and vice versa. If indoors, it is best to position yourself under sturdy furniture such as desks as that will protect you from falling debris. If no furniture is available, crawl and scrunch your body into a turtle-like position, covering your head with your hands. This is the safest position to be in as it protects all your vital body parts. If outside, relocate to an open area far from power lines or structures as they are likely to fall on you. If the earthquake is particularly strong to the point where you cannot stand, try to move inland as soon as possible. This is important because such powerful earthquakes often trigger tsunamis which are incredibly deadly disasters capable of 100% mortality rates if struck.
+</p>
+
+        <!-- Section -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; This page is created by Nerdify</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.theme-btn');
+        const body = document.body;
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                body.classList.remove('theme-yellow', 'theme-blue', 'theme-red', 'theme-green');
+                body.classList.add('theme-' + btn.dataset.theme);
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
