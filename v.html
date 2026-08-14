@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Nerdify Vault | Nerdify</title>
+</head>
+
+<body class="theme-yellow">
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <p>Theme</p>
+        <button class="theme-btn active" data-theme="yellow" style="background:#f1c40f;" title="Yellow"></button>
+        <button class="theme-btn" data-theme="blue" style="background:#3498db;" title="Blue"></button>
+        <button class="theme-btn" data-theme="red" style="background:#e74c3c;" title="Red"></button>
+        <button class="theme-btn" data-theme="green" style="background:#2ecc71;" title="Green"></button>
+    </div>
+
+    <!-- Header -->
+    <header class="page-header">
+        <div class="banner-area">
+            <img src="images/Banner.png" alt="Nerdify Banner" class="banner-img">
+        </div>
+
+        <nav class="page-nav">
+            <a href="index.html">Home</a>
+            <a href="goober.html">About</a>
+            <a href="goober.html">Community</a>
+            <a href="goober.html">Resources</a>
+            <a href="goober.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+
+        <h1 class="page-title">Nerdify Vault</h1>
+        <p class="page-intro">
+            Restricted archive of all known Items, Employees, and Divisions under Nerdify jurisdiction.
+        </p>
+
+        <!-- ========== ITEMS ========== -->
+        <h2 class="page-heading">Items</h2>
+        <p>
+            Anomalous objects, artefacts, and equipment currently contained or utilised by Nerdify.
+        </p>
+
+        <div class="feature-grid" style="margin-top: 1.5rem;">
+            <a href="goober.html" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-label">Item</div>
+                    <h3 class="feature-title">Insert Item Name</h3>
+                    <p class="feature-author">Designation: NDY-I-XXXX</p>
+                    <p class="feature-desc">Short description of the item goes here.</p>
+                    <div class="feature-footer">View File →</div>
+                </div>
+            </a>
+
+            <a href="goober.html" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-label">Item</div>
+                    <h3 class="feature-title">Insert Item Name</h3>
+                    <p class="feature-author">Designation: NDY-I-XXXX</p>
+                    <p class="feature-desc">Short description of the item goes here.</p>
+                    <div class="feature-footer">View File →</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- ========== EMPLOYEES ========== -->
+        <h2 class="page-heading">Employees</h2>
+        <p>
+            Personnel currently employed by or affiliated with Nerdify. Includes both human and anomalous staff.
+        </p>
+
+        <div class="feature-grid" style="margin-top: 1.5rem;">
+            <a href="BP.html" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-label">Employee</div>
+                    <h3 class="feature-title">Bartholomew Potysi</h3>
+                    <p class="feature-author">Designation: NDY-E-BP0</p>
+                    <p class="feature-desc">Sentient potato. Charismatic. Medium threat category.</p>
+                    <div class="feature-footer">View File →</div>
+                </div>
+            </a>
+
+            <a href="goober.html" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-label">Employee</div>
+                    <h3 class="feature-title">Insert Employee Name</h3>
+                    <p class="feature-author">Designation: NDY-E-XXXX</p>
+                    <p class="feature-desc">Short description of the employee goes here.</p>
+                    <div class="feature-footer">View File →</div>
+                </div>
+            </a>
+        </div>
+
+        <!-- ========== DIVISIONS ========== -->
+        <h2 class="page-heading">Divisions</h2>
+        <p>
+            Specialised units and departments within the Nerdify organisation.
+        </p>
+
+        <div class="feature-grid" style="margin-top: 1.5rem;">
+            <a href="goober.html" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-label">Division</div>
+                    <h3 class="feature-title">Cadet Squads</h3>
+                    <p class="feature-author">Basic Response Units</p>
+                    <p class="feature-desc">Entry-level containment and response teams.</p>
+                    <div class="feature-footer">View File →</div>
+                </div>
+            </a>
+
+            <a href="goober.html" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-label">Division</div>
+                    <h3 class="feature-title">HellFire Squads</h3>
+                    <p class="feature-author">Neutralisation Units</p>
+                    <p class="feature-desc">Specialised teams for permanent elimination of high-risk subjects.</p>
+                    <div class="feature-footer">View File →</div>
+                </div>
+            </a>
+
+            <a href="goober.html" class="feature-card-link">
+                <div class="feature-card">
+                    <div class="feature-label">Division</div>
+                    <h3 class="feature-title">[DATA CORRUPTED]</h3>
+                    <p class="feature-author">Classification: Restricted</p>
+                    <p class="feature-desc">High-level mimetic equipment unit. Access restricted.</p>
+                    <div class="feature-footer">View File →</div>
+                </div>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; This page is created by Nerdify</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.theme-btn');
+        const body = document.body;
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                body.classList.remove('theme-yellow', 'theme-blue', 'theme-red', 'theme-green');
+                body.classList.add('theme-' + btn.dataset.theme);
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
