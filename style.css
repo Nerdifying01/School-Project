@@ -18,8 +18,8 @@ body.theme-blue {
 }
 
 body.theme-red {
-    --accent: #A020F0;
-    --accent-dark: #A020F0;
+    --accent: #FF0000;
+    --accent-dark: #8B0000;
 }
 
 body.theme-green {
