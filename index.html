@@ -90,31 +90,8 @@
         </div>
     </section>
 
-    <!-- Reading for Beginners -->
-    <section class="topic" style="margin-top: 3rem;">
-        <div class="topic-title">
-         
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; This page is created by Aaron Wu</p>
-    </footer>
-
-    <script>
-        // Theme switcher
-        const buttons = document.querySelectorAll('.theme-btn');
-        const body = document.body;
-
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                body.classList.remove('theme-yellow', 'theme-blue', 'theme-red', 'theme-green');
-                body.classList.add('theme-' + btn.dataset.theme);
-                buttons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-            });
-        });
-    </script>
+   
+    
 
 </body>
 </html>
